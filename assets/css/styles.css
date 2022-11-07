@@ -1,0 +1,154 @@
+/* 
+  Accent color: #7e5ae2
+  Header font color: #050505
+  Main font color: #424149
+*/
+
+:root {
+    --main-font-color: #424149;
+    --header-font: #050505;
+    --accent-color: #7e5ae2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--main-font-color);
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    padding-inline: 5%;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 118px;
+}
+
+.desktop-nav-links {
+    display: none;
+}
+
+.mobile-hamburger {
+    background-color: var(--header-font);
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-links {
+    position: absolute;
+    opacity: 0;
+    top: 100px;
+    left: 0;
+    font-size: 14px;
+    width: 100%;
+    background: #fff;
+    transform: translateY(-25px);
+    transition: all 0.4s ease-in-out;
+    z-index: -10;
+}
+
+.mobile-nav-links .link {
+    padding: 8px 5%;
+}
+
+.container {
+    max-width: 1140px;
+    margin-inline: auto;
+}
+
+section.regular {
+    padding: 40px 5% 60px;
+}
+
+.hero-content h2 {
+    color: var(--header-font);
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.hero-content p {
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+
+.hero-points {
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.points {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+li.point {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+li.point .point-img {
+    height: 24px;
+    width: 24px;
+}
+
+.cta {
+    display: inline-block;
+    color: #fff;
+    background-color: var(--accent-color);
+    padding: 12px 24px;
+    margin-bottom: 32px;
+}
