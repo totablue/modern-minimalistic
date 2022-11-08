@@ -152,3 +152,76 @@ li.point .point-img {
     padding: 12px 24px;
     margin-bottom: 32px;
 }
+
+.statistics {
+    padding: 48px 5%;
+    border-top: 1px solid #edecf0;
+    border-bottom: 1px solid #edecf0;
+    text-align: center;
+}
+
+span.stats-divider {
+    display: block;
+    height: 1px;
+    width: 75%;
+    background-color: #edecf0;
+    margin: 32px auto;
+}
+
+.data {
+    padding-inline: 16px;
+}
+
+.data-heading {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.data-detail {
+    font-size: 14px;
+}
+
+.strengths-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.strength {
+    border: 1px solid #edecf0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+    padding: 6%;
+}
+
+.strength-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    width: 112px;
+    background-color: rgba(235, 229, 250, 0.4);
+}
+
+.strength-img img {
+    height: 64px;
+    width: 64px;
+}
+
+.strength-text h5 {
+    font-size: 22px;
+    color: var(--header-font);
+    margin-bottom: 8px;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.strength-text p {
+    font-size: 14px;
+    color: var(--main-font-color);
+    line-height: 24px;
+}
