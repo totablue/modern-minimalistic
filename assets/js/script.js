@@ -1,5 +1,6 @@
 const UIHamburger = document.querySelector(".mobile-hamburger");
 const UIMobileNav = document.querySelector(".mobile-nav-links");
+const UIYearSpan = document.querySelector(".current-year");
 let menuIsOpen = false;
 
 UIHamburger.addEventListener("click", openMenu);
@@ -19,3 +20,6 @@ function openMenu() {
 
     menuIsOpen = !menuIsOpen;
 }
+
+let today = new Date().getFullYear();
+UIYearSpan.innerHTML = today;
