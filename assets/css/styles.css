@@ -359,8 +359,11 @@ span.stats-divider {
 }
 
 footer {
+    position: relative;
     padding: 72px 3% 40px;
     border-top: 1px solid #edecf0;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-nav {
@@ -451,6 +454,23 @@ footer {
     font-size: 1.2rem;
 }
 
+.footer-terms {
+    margin-top: 100px;
+    border-top: 1px solid #edecf0;
+    width: 100%;
+}
+
+.footer-term-links {
+    padding: 42px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.footer-term-links .footer-term-link a {
+    color: #898896;
+}
+
 @media screen and (min-width: 768px) {
     section.regular {
         padding: 70px 5%;
@@ -494,6 +514,10 @@ footer {
 
     .newsletter button {
         width: auto;
+    }
+
+    .footer-term-links {
+        flex-direction: row;
     }
 }
 
@@ -587,5 +611,125 @@ footer {
 
     .copyright {
         font-size: 1.4rem;
+    }
+}
+
+/* Product Page */
+.product-clients {
+    font-size: 2.8rem;
+    color: var(--header-font);
+    text-align: center;
+}
+
+.product-client-logos {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.product-client-logo {
+    flex: 1 1 calc(50% - 16px);
+    padding: 16px;
+}
+
+section.regular.strengths.product-strength .strengths-list .strength {
+    align-items: flex-start;
+    text-align: left;
+    background-color: #f7f5fd;
+}
+
+section.regular.strengths.product-strength
+    .strengths-list
+    .strength
+    .strength-img {
+    min-height: 56px;
+    min-width: 56px;
+}
+
+section.regular.strengths.product-strength
+    .strengths-list
+    .strength
+    .strength-img
+    img {
+    height: auto;
+    width: auto;
+}
+
+.faq {
+    font-size: 2.8rem;
+    color: var(--header-font);
+    text-align: center;
+}
+
+.faq-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.faq-block {
+    padding: 16px;
+    font-size: 1.8rem;
+    background-color: #fff;
+    border: none;
+}
+
+.faq-block.focus {
+    border: 1px solid #edecf0;
+}
+
+.faq-block.focus .faq-img {
+    transform: rotate(45deg);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 15px 0;
+    gap: 30px;
+}
+
+.faq-text {
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+
+.faq-img {
+    height: 24px;
+    width: 24px;
+    transition: all 0.2s ease-in-out;
+}
+
+.faq-answer {
+    font-size: 1.6rem;
+    text-align: left;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 769px) {
+    .product-client-logos {
+        flex-wrap: nowrap;
+    }
+
+    section.regular.strengths.product-strength .strengths-list {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    section.regular.strengths.product-strength .strengths-list .strength {
+        align-items: center;
+        flex: 1 1 calc(50% - 24px);
+    }
+
+    .faq-wrapper {
+        max-width: 840px;
+        margin-inline: auto;
     }
 }

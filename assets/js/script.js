@@ -3,6 +3,10 @@ const UIMobileNav = document.querySelector(".mobile-nav-links");
 const UIYearSpan = document.querySelector(".current-year");
 let menuIsOpen = false;
 
+const UIFaqBlock = document.querySelectorAll(".faq-block");
+const UIFaqAnswer = document.querySelectorAll(".faq-answer");
+let showAnswer = false;
+
 UIHamburger.addEventListener("click", openMenu);
 
 function openMenu() {
@@ -23,3 +27,18 @@ function openMenu() {
 
 let today = new Date().getFullYear();
 UIYearSpan.innerHTML = today;
+
+for (let i = 0; i < UIFaqBlock.length; i++) {
+    UIFaqBlock[i].addEventListener("click", function () {
+        if (!showAnswer) {
+            UIFaqBlock[i].classList.add("focus");
+            UIFaqAnswer[i].style.height = "75px";
+            UIFaqAnswer[i].style.opacity = 1;
+        } else {
+            UIFaqBlock[i].classList.remove("focus");
+            UIFaqAnswer[i].style.height = 0;
+            UIFaqAnswer[i].style.opacity = 0;
+        }
+        showAnswer = !showAnswer;
+    });
+}
